@@ -47,7 +47,7 @@ console.log(getColor(0.1))
 // color theme for geojson map
 const theme = {
     radius: {
-      small: .2,
+      small: .5,
     },
     pointColor: "red",
     color: {
