@@ -64,6 +64,23 @@ const Map = () => {
 
   return (
     <>
+    <div style = {{ textAlign: 'center', paddingTop: '0.5em'}}>
+      <div style = {{ color: '#6AFF00', display:'inline-block', paddingLeft:'3em'}}>
+        Green: 0% - 20% overfishing
+      </div>
+      <div style = {{ color: '#FFF100', display:'inline-block', paddingLeft:'3em'}}>
+        Yellow: 21% - 40% overfishing
+      </div>
+      <div style = {{ color: '#FF8000', display:'inline-block', paddingLeft:'3em'}}>
+        Light Orange: 41% - 60% overfishing
+      </div>
+      <div style = {{ color: '#FF3D00', display:'inline-block', paddingLeft:'3em'}}>
+        Dark Orange: 61% - 80% overfishing
+      </div>
+      <div style = {{ color: '#FF0800', display:'inline-block', paddingLeft:'3em', paddingRight: '3em'}}>
+        Red: 81% - 100% overfishing
+      </div>
+      </div>
       {/* <div style={{ paddingLeft: "0.5em" }}>{dateFromDay(2011, day).toLocaleDateString(undefined, {month: "short", day: "numeric"})}</div> */}
       {/* <input type="range" min="1" max="366" value={day} onChange={(e) => setDay(parseInt(e.target.value))} style={{width: "35vw"}} /> */}
       <ComposableMap
@@ -72,6 +89,7 @@ const Map = () => {
         projectionConfig={geojsonFiles["Mediterranean"].projectionConfig as ProjectionConfig}
         width={200}
         height={140}
+        
       >
         <Geographies geography={geojsonFiles["Mediterranean"].file}>
           {({ geographies }) =>
