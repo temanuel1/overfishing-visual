@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+sampling/European_Model2
+sampling/Final_Europe
+sampling/scaler.gz
