@@ -59,13 +59,9 @@ const theme = {
 
 
 const Map = () => {
-  const [day, setDay] = useState(1)
+  const [day] = useState(1)
   const locations = scaledPredictions.filter((val) => val.day === day - 1);
-  
-  function dateFromDay(year: number, day: number){
-    var date = new Date(year, 0); // initialize a date in `year-01-01`
-    return new Date(date.setDate(day)); // add the number of days
-  }
+
   return (
     <>
       {/* <div style={{ paddingLeft: "0.5em" }}>{dateFromDay(2011, day).toLocaleDateString(undefined, {month: "short", day: "numeric"})}</div> */}
